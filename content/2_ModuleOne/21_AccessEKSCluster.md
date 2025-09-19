@@ -7,7 +7,7 @@ weight: 31
 # Access Provisioned EKS Cluster
 
 ## Connect to the Coder Control Plane Infrastructure
-![AWS RefArch](https://raw.githubusercontent.com/coder/coder/main/docs/images/architecture-diagram.png)
+![AWS RefArch](/images/coder-logical-architecture.png)
 
 The core Coder Control Plane infrastructure has been automatically deployed using AWS EKS as depicted in the reference architecture above. The CloudFormation template has created all necessary foundational AWS services including VPC, subnets, compute resources, and storage, along with an EKS cluster named `coder-aws-cluster`.
 
