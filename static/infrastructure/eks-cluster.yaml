@@ -691,6 +691,14 @@ Resources:
                       sed -i "s|https://coder.example.com|$CODER_CLOUDFRONT_URL|g" coder-core-values-v2.yaml
                       sed -i "s|\*.coder.example.com|$CODER_CLOUDFRONT_WILDCARD|g" coder-core-values-v2.yaml
                       helm upgrade coder coder-v2/coder --namespace coder --values coder-core-values-v2.yaml --version "${CoderVersion}"
+                      #Perform initial Coder Login and create initial admin user
+                      echo "Creating initial Coder Administrator User"
+                      coder login $CODER_CLOUDFRONT_URL \
+                        --first-user-email $CoderAdminEmail \
+                        --first-user-username $CoderAdminUser \
+                        --first-user-password $CoderAdminPassword \
+                        --first-user-full-name $CoderAdminName \
+                        --first-user-trial=$CoderPremiumTrial 
                     fi
                     
                     aws ssm put-parameter --name "/eks/${EKSClusterName}/cluster-name" --value "${EKSClusterName}" --type "String" --overwrite
