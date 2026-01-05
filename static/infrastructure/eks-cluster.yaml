@@ -4,12 +4,12 @@ Parameters:
   KubernetesVersion:
     Description: Kubernetes version
     Type: String
-    Default: "1.32"
+    Default: "1.34"
 
   CoderVersion:
     Description: Coder version
     Type: String
-    Default: "2.26.3"
+    Default: "2.29.1"
 
   EKSClusterName:
     Description: Name of EKS Cluster
@@ -36,7 +36,37 @@ Parameters:
   DatabaseName:
     Type: String
     Description: Initial database name
-    Default: coder
+    Default: coder  
+
+  CoderAdminEmail:
+    Type: String
+    Description: Coder Administrator Email
+    Default: admin@example.com
+    
+  CoderAdminUser:
+    Type: String
+    Description: Coder Administrator User Name
+    Default: admin
+
+  CoderAdminPassword:
+    Type: String
+    Description: Administrator password for Coder
+    NoEcho: true
+    MinLength: 8
+    Default: admin@coder
+
+  CoderAdminName:
+    Type: String
+    Description: Coder Administrator Full Name
+    Default: "Admin User"
+
+  CoderPremiumTrial:
+    Type: String
+    Description: Start 30-Day Coder Premium Trial
+    AllowedValues:
+      - "true"
+      - "false"
+    Default: "false"
 
 Resources:
 ################## PERMISSIONS AND ROLES #################
@@ -472,6 +502,16 @@ Resources:
             Value: !GetAtt CoderAuroraCluster.Endpoint.Address
           - Name: PostgreSQLPort
             Value: !GetAtt CoderAuroraCluster.Endpoint.Port
+          - Name: CoderAdminEmail
+            Value: !Ref CoderAdminEmail
+          - Name: CoderAdminName
+            Value: !Ref CoderAdminName
+          - Name: CoderAdminPassword
+            Value: !Ref CoderAdminPassword
+          - Name: CoderAdminUser
+            Value: !Ref CoderAdminUser
+          - Name: CoderPremiumTrial
+            Value: !Ref CoderPremiumTrial          
           
       Source:
         Type: NO_SOURCE
@@ -538,6 +578,14 @@ Resources:
                 - curl --silent --fail --retry 5 --location "https://get.helm.sh/helm-v3.16.4-linux-amd64.tar.gz" | tar xz -C /tmp
                 - mv -v /tmp/linux-amd64/helm /usr/local/bin
                 - helm version
+                - curl --silent --fail --retry 5 -L https://coder.com/install.sh | sh -s -- --version ${CoderVersion} --method standalone
+                - coder --version
+                - TERRAFORM_VERSION=$(curl -s https://api.github.com/repos/hashicorp/terraform/releases/latest | grep tag_name | cut -d '"' -f 4 | sed 's/v//')
+                - wget https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+                - unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip
+                - mv terraform /usr/local/bin/
+                - chmod +x /usr/local/bin/terraform
+                - terraform version
                 - export PATH=$PWD/:$PATH
             build:
               commands:
