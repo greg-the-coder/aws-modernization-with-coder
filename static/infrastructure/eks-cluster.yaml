@@ -696,8 +696,8 @@ Resources:
                       coder login $CODER_CLOUDFRONT_URL \
                         --first-user-email $CoderAdminEmail \
                         --first-user-username $CoderAdminUser \
-                        --first-user-password $CoderAdminPassword \
-                        --first-user-full-name $CoderAdminName \
+                        --first-user-password '$CoderAdminPassword' \
+                        --first-user-full-name '$CoderAdminName' \
                         --first-user-trial=$CoderPremiumTrial 
                     fi
                     
