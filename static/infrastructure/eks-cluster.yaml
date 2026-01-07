@@ -710,7 +710,7 @@ Resources:
                      
                       echo "Deploying Coder GitOps Template Repository: $CoderGitOpsTemplateRepoURL"
                       git clone $CoderGitOpsTemplateRepoURL
-                      CODER_GITOPS_DIR=$(basename $CoderGitOpsTemplateRepoURL .git)
+                      CODER_GITOPS_DIR=$(basename "$CoderGitOpsTemplateRepoURL" .git)
                       cd $CODER_GITOPS_DIR/templates 
                       terraform init
                       ./templates_gitops.sh $CODER_SESSION_TOKEN
