@@ -698,6 +698,13 @@ Resources:
                       sed -i "s|https://coder.example.com|$CODER_CLOUDFRONT_URL|g" coder-core-values-v2.yaml
                       sed -i "s|\*.coder.example.com|$CODER_CLOUDFRONT_WILDCARD|g" coder-core-values-v2.yaml
                       helm upgrade coder coder-v2/coder --namespace coder --values coder-core-values-v2.yaml --version "${CoderVersion}"
+
+                      echo "Deploying Coder GitOps Template Repository: $CoderGitOpsTemplateRepoURL"
+                      git clone $CoderGitOpsTemplateRepoURL
+                      CODER_GITOPS_DIR=$(basename "$CoderGitOpsTemplateRepoURL" .git)
+                      CODER_AGENT_URL="$CODER_CLOUDFRONT_URL"
+                      cd $CODER_GITOPS_DIR/templates 
+
                       #Perform initial Coder Login and create initial admin user
                       echo "Creating initial Coder Administrator User"
                       coder login $CODER_CLOUDFRONT_URL \
@@ -706,14 +713,11 @@ Resources:
                         --first-user-password "$CoderAdminPassword" \
                         --first-user-full-name "$CoderAdminName" \
                         --first-user-trial=$CoderPremiumTrial 
+
                       # Create a session token for template deployment
                       CODER_SESSION_TOKEN=$(coder tokens create --lifetime 24h)
                       echo "Session token created successfully "+$CODER_SESSION_TOKEN 
-                     
-                      echo "Deploying Coder GitOps Template Repository: $CoderGitOpsTemplateRepoURL"
-                      git clone $CoderGitOpsTemplateRepoURL
-                      CODER_GITOPS_DIR=$(basename "$CoderGitOpsTemplateRepoURL" .git)
-                      cd $CODER_GITOPS_DIR/templates 
+                      echo "Deploying GitOps templates via Terraform"
                       terraform init
                       ./templates_gitops.sh $CODER_SESSION_TOKEN
                     fi
