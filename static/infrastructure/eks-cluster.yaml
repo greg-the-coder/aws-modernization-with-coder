@@ -702,7 +702,7 @@ Resources:
                       echo "Deploying Coder GitOps Template Repository: $CoderGitOpsTemplateRepoURL"
                       git clone $CoderGitOpsTemplateRepoURL
                       CODER_GITOPS_DIR=$(basename "$CoderGitOpsTemplateRepoURL" .git)
-                      CODER_AGENT_URL="$CODER_CLOUDFRONT_URL"
+                      CODER_AGENT_URL="$CODER_CLOUDFRONT_URL"; export CODER_AGENT_URL
                       cd $CODER_GITOPS_DIR/templates 
 
                       #Perform initial Coder Login and create initial admin user
@@ -717,7 +717,7 @@ Resources:
                       # Create a session token for template deployment
                       CODER_SESSION_TOKEN=$(coder tokens create --lifetime 24h)
                       echo "Session token created successfully "+$CODER_SESSION_TOKEN 
-                      echo "Deploying GitOps templates via Terraform"
+                      echo "Deploying GitOps templates via Terraform: $CODER_AGENT_URL"
                       terraform init
                       ./templates_gitops.sh $CODER_SESSION_TOKEN
                     fi
