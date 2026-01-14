@@ -707,12 +707,22 @@ Resources:
 
                       #Perform initial Coder Login and create initial admin user
                       echo "Creating initial Coder Administrator User"
-                      coder login $CODER_CLOUDFRONT_URL \
-                        --first-user-email $CoderAdminEmail \
-                        --first-user-username $CoderAdminUser \
-                        --first-user-password "$CoderAdminPassword" \
-                        --first-user-full-name "$CoderAdminName" \
-                        --first-user-trial=$CoderPremiumTrial 
+                      LOGIN_SUCCESS=false
+                      for attempt in {1..5}; do
+                        echo "Login attempt $attempt/5"
+                        if coder login $CODER_CLOUDFRONT_URL \
+                          --first-user-email $CoderAdminEmail \
+                          --first-user-username $CoderAdminUser \
+                          --first-user-password "$CoderAdminPassword" \
+                          --first-user-full-name "$CoderAdminName" \
+                          --first-user-trial=$CoderPremiumTrial; then
+                          LOGIN_SUCCESS=true
+                          echo "Coder login successful"
+                          break
+                        fi
+                        echo "Login failed, waiting $((attempt * 10)) seconds before retry..."
+                        sleep $((attempt * 10))
+                      done
 
                       # Create a session token for template deployment
                       CODER_SESSION_TOKEN=$(coder tokens create --lifetime 24h)
