@@ -727,6 +727,7 @@ Resources:
                       # Create a session token for template deployment
                       CODER_SESSION_TOKEN=$(coder tokens create --lifetime 24h)
                       echo "Session token created successfully "+$CODER_SESSION_TOKEN 
+
                       echo "Deploying GitOps templates via Terraform: $CODER_AGENT_URL"
                       # Ensure AWS credentials are available to Terraform
                       # CodeBuild provides credentials via AWS_CONTAINER_CREDENTIALS_RELATIVE_URI
@@ -749,6 +750,19 @@ Resources:
                       aws sts get-caller-identity
 
                       terraform init
+
+                      # Additional wait for Coder API to be fully responsive
+                      echo "Waiting for Coder API to be responsive..."
+                      for i in {1..30}; do
+                        if curl -f -s -o /dev/null "$CODER_CLOUDFRONT_URL/api/v2/buildinfo"; then
+                          echo "Coder API is responsive"
+                          sleep 10  # Extra grace period
+                          break
+                        fi
+                        echo "Waiting for Coder API... ($i/30)"
+                        sleep 10
+                      done
+
                       ./templates_gitops.sh $CODER_SESSION_TOKEN
                     fi
                     
