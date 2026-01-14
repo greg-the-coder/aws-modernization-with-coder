@@ -718,6 +718,13 @@ Resources:
                       CODER_SESSION_TOKEN=$(coder tokens create --lifetime 24h)
                       echo "Session token created successfully "+$CODER_SESSION_TOKEN 
                       echo "Deploying GitOps templates via Terraform: $CODER_AGENT_URL"
+                      # Ensure AWS credentials are available to Terraform
+                      export AWS_ACCESS_KEY_ID
+                      export AWS_SECRET_ACCESS_KEY
+                      export AWS_SESSION_TOKEN
+                      export AWS_DEFAULT_REGION=$AWSRegion
+                      export AWS_REGION=$AWSRegion
+
                       terraform init
                       ./templates_gitops.sh $CODER_SESSION_TOKEN
                     fi
