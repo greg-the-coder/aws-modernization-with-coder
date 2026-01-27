@@ -8,7 +8,6 @@ You'll have access to **Coder Agent-Ready Workspaces** - cloud development envir
 
 - **Instant Development Environment**: No setup time - jump straight into coding with pre-configured tools and dependencies
 - **AI-Powered Coding Assistance**: Built-in AI agents to help with code generation, debugging, and optimization
-- **Collaborative Features**: Share workspaces and collaborate in real-time with your team
 - **Scalable Resources**: Access to cloud compute resources that scale with your needs
 
 ### Game Day Scenarios Where Coder Accelerates Success
@@ -30,11 +29,20 @@ You'll have access to **Coder Agent-Ready Workspaces** - cloud development envir
 
 Your mission: Deploy the most robust and feature-rich Pet Store Agent using Coder's agentic capabilities to outpace the competition!
 ## Success Criteria and Score Validation
+## Steps 
+1. Login to the provided Coder instance and review available Templates
+2. Select and launch a workspace using one of the AWS Coder AI Builder GitOps templates
+3. Use the AI coding assistants to:    
+    - Scaffold and deploy the Pet Store Agent on AWS Bedrock AgentCore
+    - Enhance the agent with additional features or optimizations
+    - Debug any issues that arise during deployment or testing
+    - Respond to Evaluation feedback and research enhancements to increase score
+
+
 By the end, you will have:
 - TODO 
 - **Pro tip:** TODO 
 ## Get tasks done faster: Coder Demo (recording with features, how to and tips)::video{id=TBD}
-## Steps 
 TODO: high level to keep it as competition
 ## You're Done! 
 Congrats - TBD..
