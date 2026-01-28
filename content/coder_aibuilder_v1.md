@@ -13,6 +13,7 @@ You'll have access to **Coder Agent-Ready Workspaces** - cloud development envir
 ### Game Day Scenarios Where Coder Accelerates Success
 
 **Scenario 1: Rapid Agent Deployment**
+- Access 3 specialized Coder templates from the [AWS Coder AI Builder GitOps repository](https://github.com/coder/aws-coder-ai-builder-gitops/tree/main/templates)
 - Use Coder's pre-built templates to quickly scaffold your Pet Store Agent infrastructure
 - Leverage AI assistance to generate boilerplate code and configuration files
 - Deploy faster than manual setup by 70%+
@@ -21,11 +22,6 @@ You'll have access to **Coder Agent-Ready Workspaces** - cloud development envir
 - Utilize AI coding agents to identify and fix bugs in your Pet Store Agent logic
 - Get intelligent code suggestions for performance optimizations
 - Implement new features with AI-generated code snippets
-
-**Scenario 3: Infrastructure as Code**
-- Access 3 specialized Coder templates from the [AWS Coder AI Builder GitOps repository](https://github.com/coder/aws-coder-ai-builder-gitops/tree/main/templates)
-- Use agentic software development to automate infrastructure provisioning
-- Implement GitOps workflows with AI-assisted configuration management
 
 Your mission: Deploy the most robust and feature-rich Pet Store Agent using Coder's agentic capabilities to outpace the competition!
 ## Success Criteria and Score Validation
@@ -42,14 +38,3 @@ Your mission: Deploy the most robust and feature-rich Pet Store Agent using Code
 By the end, you will have:
 - TODO 
 - **Pro tip:** TODO 
-## Get tasks done faster: Coder Demo (recording with features, how to and tips)::video{id=TBD}
-TODO: high level to keep it as competition
-## You're Done! 
-Congrats - TBD..
-**Want to go deeper?** Check out these resources:
-- [docs]()
-## Troubleshooting
-TBD
-
-## Backend API Calls with Parameters, etc. to validate Coder Usage
-TBD
