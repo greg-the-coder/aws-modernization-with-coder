@@ -7,7 +7,7 @@ weight: 20
 
 The following architecture diagram illustrates the comprehensive AWS and Coder integration we'll be deploying: 
 
-![architecture diagram](/static/images/AWSCoderSingleRegionv1-1.png)
+![architecture diagram](/static/images/AWSCoderSingleRegionv2-0.png)
 
 This architecture demonstrates a production-ready, scalable development platform that combines:
 
