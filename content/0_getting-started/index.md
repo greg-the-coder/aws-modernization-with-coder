@@ -40,9 +40,8 @@ The workshop infrastructure will be automatically deployed using AWS CloudFormat
 
 You will configure:
 
-🔧 **Development Templates** for different personas  
-🔧 **AI Integration** with Amazon Q Developer and Claude  
-
+🔧 **Development Workspaces using Templates** for different personas  
+🔧 **AI Integration** with Amazon Kiro and Claude  
 
 ::alert[**Estimated Deployment Time**: The CloudFormation stack takes approximately 15-20 minutes to deploy all infrastructure components. You can monitor progress in the AWS CloudFormation console.]{type="info"}
 
