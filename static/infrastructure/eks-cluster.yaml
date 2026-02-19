@@ -215,6 +215,8 @@ Resources:
                   - iam:TagRole
                   - iam:UntagRole
                   - iam:CreateInstanceProfile
+                  - iam:GetInstanceProfile
+                  - iam:ListInstanceProfiles
                   - iam:DeleteInstanceProfile
                   - iam:AddRoleToInstanceProfile
                   - iam:RemoveRoleFromInstanceProfile
