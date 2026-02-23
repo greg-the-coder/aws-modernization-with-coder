@@ -74,9 +74,9 @@ Kiro will provide:
 
 Step 2: AI-Generated Project Structure - have Kiro generate the supporting project structure with the following prompt:
 ```bash
-generate a supporting project structure for an AWS CDK application that uses typescript for the front end components and python for back-end API components that is deployable to AWS (e.g via CDK) and uses modern, cloud-native web development patterns.
+Generate a supporting project structure for an AWS CDK application that uses typescript for the front end components and python for back-end API components that is deployable to AWS (e.g via CDK) and uses modern, cloud-native web development patterns.
 ```
-Like any AI agent, Kiro may need additional guidance. If the agent isn't moving in the right direction, provide clarifying prompts to redirect its activity.  Kiro may prompt you for specific implementation decisions, and desired complexity of your initial implementation.
+Like any AI agent, Kiro may need additional guidance. If the agent isn't moving in the right direction, provide clarifying prompts to redirect its activity.  Kiro may prompt you for specific implementation decisions, and desired complexity of your initial application.
 
 ::alert[Kiro will request permission before creating or modifying files in your workspace, ensuring you maintain control over changes.]{type="info"}
 
