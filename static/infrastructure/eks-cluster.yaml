@@ -619,7 +619,7 @@ Resources:
     Properties:
       DBClusterIdentifier: !Ref DatabaseName
       Engine: aurora-postgresql
-      EngineVersion: '16.6'
+      EngineVersion: '16.11'
       MasterUsername: !Ref Username
       MasterUserPassword: !Ref Password
       DatabaseName: !Ref DatabaseName
