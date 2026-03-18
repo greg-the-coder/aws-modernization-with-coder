@@ -128,7 +128,7 @@ This should remove any deployed components and ensure Kiro double-checks and rev
 
 ### Kiro-Specific Capabilities
 
-**MCP Server Integration**: Kiro's support for Model Context Protocol enables and related tools across a broad ecosystem of 3rd-Party services and AWS integrations.
+**MCP Server Integration**: Kiro's support for Model Context Protocol enables and integrates related tools across a broad ecosystem of 3rd-Party services and AWS Services.
 
 **Workspace Trust**: Pre-configured workspace trust settings ensure seamless IDE integration without security prompts.
 

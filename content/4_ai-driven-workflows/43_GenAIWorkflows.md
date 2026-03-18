@@ -15,28 +15,19 @@ Let's create a complete RAG application development environment that combines Ku
 
 #### Step 1: Create Your RAG Development Workspace
 
-Create a workspace using the AWS Workshop - Kubernetes with Claude Code RAG template:
-1. **Access your Coder dashboard** and click "Create Workspace"
-2. **Select the AWS Workshop - Kubernetes with Claude Code RAG template** from the dropdown
-3. **Configure the workspace parameters**:
-   - **Name**: `rag-dev-workspace`
-   - **CPU**: 4 Cores (recommended for RAG workloads)
-   - **Memory**: 8 GB (recommended for vector processing)
-   - **Home disk size**: 30 GB
-   - **AI Prompt**: `Look for an AWS RAG Prototyping repo in the Coder Workspace. If found, create a new Python3 virtual environment, pip install the requirements.txt and then start the app via streamlit.`
+Create a Task using the using the AWS Workshop - Kubernetes with Claude Code RAG template:
+1. **Access your Coder dashboard** and click "Tasks" (may need to refresh dashboard for Task option to appear)
+2. **Within the Task UI, Select the AWS Workshop - Kubernetes with Claude Code RAG template** from the dropdown
+3. **Configure the Task prompt**:
+   `Look for an AWS RAG Prototyping repo in the Coder Workspace. If found, create a new Python3 virtual environment, pip install the requirements.txt and then start the app via streamlit.`
 
-4. **Click "Create Workspace"** and wait for it to start
+4. **Click "Run task"** and wait for it to start
 
 ::alert[This template automatically provisions a Kubernetes pod with Aurora PostgreSQL Serverless v2 (with pgvector extension), Claude Code integration, and all necessary development tools for RAG application development.]{type="info"}
 
 #### Step 2: Explore the RAG Development Environment
 
-Once your workspace is running:
-
-1. **Open the workspace** from your Coder dashboard
-2. **View task** to access Task UI and monitor Claude Code
-
-![Coder GenAI Workspace](/static/images/genai-workspace.png)
+Once your task is running, select the Task from the displayed list to open the Task UI.  Once the Task initializes, the Claude Cod Web UI in the left pane will be begin by creating and updating a "To Do List" of activities to be peformed.  As it progresses, you can monitor the Agents actions.
 
 #### Step 3: Validate RAG Application Environment
 
