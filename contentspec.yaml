@@ -47,7 +47,6 @@ awsAccountConfig:
       - static/iam_policy.json
     managedPolicies:
       - "arn:aws:iam::aws:policy/IAMReadOnlyAccess"
-      - "arn:aws:iam::aws:policy/AdministratorAccess"
     trustedPrincipals:
       service:
         - ec2.amazonaws.com
