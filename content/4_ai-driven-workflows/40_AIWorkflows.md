@@ -46,21 +46,20 @@ Once provisioned, you'll have access to:
 3. Open the **AI Agent** tab to confirm issues are loaded
 
 The AI assistant should display the available issues from the repository, including:
-- Issue #1: Change card back design (Easy)
-- Issue #2: Add difficulty levels
-- Issue #3: Implement high score persistence
-- Issue #4: Create theme selector
-- Issue #5: Add countdown timer
-- Issue #6: Add full difficulty system
+- Issue #1014: Change card back design
+- Issue #1015: Add difficulty levels (4x4, 6x6, 8x8 grids)
+- Issue #1016: Implement high score persistence
+- Issue #1017: Create theme selector
+- Issue #1018: Add a countdown timer
 
-#### Step 3: Make Your First Change — Card Back Design (Issue #1)
+#### Step 3: Make Your First Change — Card Back Design (Issue #1014)
 
 Let's start with a simple visual change to see the agent in action. In the AI Agent tab, provide this prompt:
 
 ```
-I want to work on Issue #1 to add a red diamond to card backs. Please:
+I want to work on Issue #1014 to change the card back design. Please:
 1. Review the card rendering in the source code
-2. Create branch: coder-contrib/issue-1-card-back-diamond
+2. Create branch: coder-contrib/issue-1014-card-back-diamond
 3. Modify the card back display to show a red diamond emoji or SVG
 4. Ensure it only shows when cards are face down
 5. Verify the change in the running app
@@ -75,12 +74,12 @@ I want to work on Issue #1 to add a red diamond to card backs. Please:
 
 ::alert[The AI agent operates within defined boundaries — it has read/write access to project files and can execute Node.js tooling, but follows a step-by-step workflow and will not push to main/master branches.]{type="info"}
 
-#### Step 4: Add Game Functionality — High Score Tracking (Issue #3)
+#### Step 4: Add Game Functionality — High Score Tracking (Issue #1016)
 
 Now let's add persistence logic. Prompt the agent:
 
 ```
-I want to work on Issue #3 to implement high score tracking. Please:
+I want to work on Issue #1016 to implement high score persistence. Please:
 1. Add state tracking for best score (lowest number of moves)
 2. Use localStorage to persist the high score between sessions
 3. Display "Best: X moves" in the game UI
@@ -95,12 +94,12 @@ I want to work on Issue #3 to implement high score tracking. Please:
 - UI updates appear immediately in the Preview App
 - The agent tests by simulating gameplay to verify persistence works
 
-#### Step 5: Add Visual Polish — Theme Selector (Issue #4)
+#### Step 5: Add Visual Polish — Theme Selector (Issue #1017)
 
 For a more substantial change that demonstrates the agent handling multiple files:
 
 ```
-I want to work on Issue #4 to create a theme selector. Please:
+I want to work on Issue #1017 to create a theme selector. Please:
 1. Add theme options: Animals, Emoji, and Flags
 2. Create symbol arrays for each theme:
    - Animals: 🐶🐱🐭🐹🐰🦊🐻🐼
