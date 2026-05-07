@@ -6,7 +6,7 @@ weight: 43
 
 ## Available Workshop Templates
 
-The workshop environment includes five pre-deployed templates designed for different development personas and use cases. Explore their capabilities by creating workspaces from each template:
+The workshop environment includes six pre-deployed templates designed for different development personas and use cases. Explore their capabilities by creating workspaces from each template:
 
 ### 1. Kubernetes with Kiro CLI (`awshp-k8s-with-kiro-cli`)
 
@@ -79,7 +79,27 @@ The workshop environment includes five pre-deployed templates designed for diffe
 - Cost-effective ARM64 development
 - Local serverless testing
 
-### 5. Windows Development with DCV (`awshp-windows-dcv`)
+### 5. Kubernetes Memorycard with Claude Code (`awshp-k8s-cc-memorycard`)
+
+**Purpose**: Memory Card Game development with Claude Code AI agent and autonomous task workflows
+
+**Key Features**:
+- Kubernetes pod-based workspaces with Claude Code in a tmux session
+- Pre-configured MCP servers (GitHub, Playwright) for agent tooling
+- Vite dev server with hot-reload on port 5173 for live preview
+- Automated home directory seeding with AI agent configuration
+- Task-based workflows with autonomous issue resolution
+- VS Code Web, File Browser, and Portable Desktop included
+- 25GB persistent volume with 2 CPU / 4GB RAM resource limits
+
+**Use Cases**:
+- AI-driven interactive application development
+- Autonomous agent workflows with real-time visual feedback
+- Rapid iteration on web applications using natural language prompts
+- Demonstrating agentic development patterns with running applications
+- Workshop scenarios for AI-powered game modifications
+
+### 6. Windows Development with DCV (`awshp-windows-dcv`)
 
 **Purpose**: Windows-based development with NICE DCV remote desktop
 

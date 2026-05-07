@@ -56,7 +56,7 @@ Coder templates leverage several key AWS services and patterns:
 
 ## Template Types Pre-Deployed
 
-The workshop environment includes five pre-configured templates ready for use:
+The workshop environment includes six pre-configured templates ready for use:
 
 ### 1. Kubernetes with Kiro CLI
 **Purpose**: AI-powered development with Kiro CLI and MCP server support
@@ -94,7 +94,16 @@ The workshop environment includes five pre-configured templates ready for use:
 - Cost-effective ARM64 development
 - Local serverless testing
 
-### 5. Windows Development with DCV
+### 5. Kubernetes Memorycard with Claude Code
+**Purpose**: Memory Card Game development with Claude Code AI agent and autonomous task workflows
+
+**Use Cases**:
+- AI-driven interactive application development
+- Autonomous agent workflows with live preview
+- Rapid iteration using natural language prompts
+- Demonstrating agentic development patterns with real applications
+
+### 6. Windows Development with DCV
 **Purpose**: Windows-based development with NICE DCV remote desktop
 
 **Use Cases**:
