@@ -8,78 +8,7 @@ weight: 43
 
 The workshop environment includes six pre-deployed templates designed for different development personas and use cases. Explore their capabilities by creating workspaces from each template:
 
-### 1. Kubernetes with Kiro CLI (`awshp-k8s-with-kiro-cli`)
-
-**Purpose**: AI-powered development with Kiro CLI and MCP server support
-
-**Key Features**:
-- Kubernetes pod-based workspaces with persistent storage
-- Kiro CLI with Model Context Protocol (MCP) server support
-- Pre-installed AWS CLI v2, AWS CDK, and Node.js 20 LTS
-- uv/uvx for Python-based MCP servers
-- Workspace trust pre-configured for seamless IDE integration
-- Fast startup times (~30-60 seconds)
-
-**Use Cases**:
-- AI-assisted development with configurable MCP servers
-- Infrastructure as Code with AWS CDK
-- General-purpose AWS development on Kubernetes
-- MCP server integration (Pulumi, LaunchDarkly, Arize, etc.)
-
-### 2. Kubernetes with Claude Code (`awshp-k8s-with-claude-code`)
-
-**Purpose**: Container-based development with Claude Code 4.7.1 AI assistant and task automation
-
-**Key Features**:
-- Kubernetes pod-based workspaces with AI assistance
-- Claude Code 4.7.1 with AWS Bedrock (Claude Opus 4.5)
-- Task-based workflows using `coder task create`
-- Pre-installed AWS CLI, AWS CDK, Node.js 20.x
-- Preview server on port 3000 with health checks
-- Automated testing with Playwright integration
-
-**Use Cases**:
-- AI-driven development with task-based workflows
-- Rapid prototyping with AI code generation
-- Microservices and container orchestration
-- Automated testing and deployment
-
-### 3. Kubernetes RAG with Claude Code (`awshp-k8s-rag-with-claude-code`)
-
-**Purpose**: RAG application prototyping with Aurora PostgreSQL pgvector and Claude Code
-
-**Key Features**:
-- Kubernetes pod-based workspaces optimized for RAG development
-- Aurora PostgreSQL 16.8 Serverless v2 with pgvector extension
-- Claude Code 4.7.1 with AWS Bedrock (Claude Sonnet 4.5)
-- Streamlit preview on port 8501
-- Auto-configured database with environment variables
-- Git repository auto-cloning for RAG prototyping
-
-**Use Cases**:
-- AI/ML application development with RAG patterns
-- Vector database integration for embeddings
-- Document processing and intelligent search systems
-- Streamlit-based data applications
-
-### 4. AWS SAM Development (`awshp-linux-sam`)
-
-**Purpose**: Serverless application development with AWS SAM CLI on ARM64
-
-**Key Features**:
-- Amazon EC2 ARM64/Graviton instances for cost-effective development
-- AWS Serverless Application Model (SAM) CLI pre-installed
-- AWS CLI v2 with ARM64 optimization
-- Python 3 runtime environment
-- Local Lambda and API Gateway testing
-
-**Use Cases**:
-- AWS Lambda function development
-- Serverless application architecture
-- Cost-effective ARM64 development
-- Local serverless testing
-
-### 5. Kubernetes Memorycard with Claude Code (`awshp-k8s-cc-memorycard`)
+### 1. Kubernetes Memorycard with Claude Code (`awshp-k8s-cc-memorycard`)
 
 **Purpose**: Memory Card Game development with Claude Code AI agent and autonomous task workflows
 
@@ -98,6 +27,77 @@ The workshop environment includes six pre-deployed templates designed for differ
 - Rapid iteration on web applications using natural language prompts
 - Demonstrating agentic development patterns with running applications
 - Workshop scenarios for AI-powered game modifications
+
+### 2. Kubernetes with Kiro CLI (`awshp-k8s-with-kiro-cli`)
+
+**Purpose**: AI-powered development with Kiro CLI and MCP server support
+
+**Key Features**:
+- Kubernetes pod-based workspaces with persistent storage
+- Kiro CLI with Model Context Protocol (MCP) server support
+- Pre-installed AWS CLI v2, AWS CDK, and Node.js 20 LTS
+- uv/uvx for Python-based MCP servers
+- Workspace trust pre-configured for seamless IDE integration
+- Fast startup times (~30-60 seconds)
+
+**Use Cases**:
+- AI-assisted development with configurable MCP servers
+- Infrastructure as Code with AWS CDK
+- General-purpose AWS development on Kubernetes
+- MCP server integration (Pulumi, LaunchDarkly, Arize, etc.)
+
+### 3. Kubernetes with Claude Code (`awshp-k8s-with-claude-code`)
+
+**Purpose**: Container-based development with Claude Code AI assistant and task automation
+
+**Key Features**:
+- Kubernetes pod-based workspaces with AI assistance
+- Claude Code with AWS Bedrock (Claude Opus 4.5)
+- Task-based workflows using `coder task create`
+- Pre-installed AWS CLI, AWS CDK, Node.js 20.x
+- Preview server on port 3000 with health checks
+- Automated testing with Playwright integration
+
+**Use Cases**:
+- AI-driven development with task-based workflows
+- Rapid prototyping with AI code generation
+- Microservices and container orchestration
+- Automated testing and deployment
+
+### 4. Kubernetes RAG with Claude Code (`awshp-k8s-rag-with-claude-code`)
+
+**Purpose**: RAG application prototyping with Aurora PostgreSQL pgvector and Claude Code
+
+**Key Features**:
+- Kubernetes pod-based workspaces optimized for RAG development
+- Aurora PostgreSQL 16.8 Serverless v2 with pgvector extension
+- Claude Code with AWS Bedrock (Claude Sonnet 4.5)
+- Streamlit preview on port 8501
+- Auto-configured database with environment variables
+- Git repository auto-cloning for RAG prototyping
+
+**Use Cases**:
+- AI/ML application development with RAG patterns
+- Vector database integration for embeddings
+- Document processing and intelligent search systems
+- Streamlit-based data applications
+
+### 5. AWS SAM Development (`awshp-linux-sam`)
+
+**Purpose**: Serverless application development with AWS SAM CLI on ARM64
+
+**Key Features**:
+- Amazon EC2 ARM64/Graviton instances for cost-effective development
+- AWS Serverless Application Model (SAM) CLI pre-installed
+- AWS CLI v2 with ARM64 optimization
+- Python 3 runtime environment
+- Local Lambda and API Gateway testing
+
+**Use Cases**:
+- AWS Lambda function development
+- Serverless application architecture
+- Cost-effective ARM64 development
+- Local serverless testing
 
 ### 6. Windows Development with DCV (`awshp-windows-dcv`)
 

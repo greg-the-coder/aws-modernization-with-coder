@@ -27,11 +27,11 @@ You set out to master three key areas of modern development infrastructure, and 
 ### ✅ Template Creation & Management 
 **What was Deployed:**
 - Six persona-based Coder templates:
-  - AWS SAM Development for serverless applications
-  - Kubernetes Development with Claude Code integration
-  - Kubernetes RAG with Claude Code and Aurora pgvector
   - Kubernetes Memorycard with Claude Code for AI-driven game development
   - Kubernetes Development with Kiro CLI and IDE integration
+  - Kubernetes Development with Claude Code integration
+  - Kubernetes RAG with Claude Code and Aurora pgvector
+  - AWS SAM Development for serverless applications
   - Windows Development with NICE DCV remote desktop
 - Configured templates with pre-installed tools and dependencies
 - Implemented Infrastructure as Code patterns for consistent provisioning
